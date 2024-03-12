@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:400,400italic,500,500italic);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  float: right;
+  width: 150px;
+  height: auto;
+  margin-left: -6%;
+}
+
+.navbars a {
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.navbars a span {
+  color: white;
+  font-weight: bolder;
+}
+
+.navbars a:hover {
+  color: white;
+}
+
+.navbars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: white;
+  display: none;
+  scroll-behavior: smooth;
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .head {
+    padding: 2rem 3%;
+  }
+  .logo {
+    width: 150px;
+    height: auto;
+    margin-left: -2%;
+  }
+}
+
+@media (max-width: 1059px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbars {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: #3B71CA;
+    display: none;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0.6;
+    overflow: hidden;
+  }
+  .navbars.active {
+    display: flex;
+  }
+  .navbars a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .logo {
+    width: 130px;
+    height: auto;
+    margin-left: -1%;
+  }
+}
+
+.nl {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nl::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s;
+}
+
+
+.nl:hover::before {
+  width: 100%;
+}
+.carousel-container {
+  margin-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    top: 10px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+   
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+  }
+
+  .container {
+    margin-top: 2%;
+  }
+  
+
+  
+  /* Additional styles for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      margin-left: 0;
+    }
+  
+    /* .contact_info {
+      margin-left: 0;
+      margin-right: 0;
+    } */
+  }
+  
+  .cdisplay {
+    display: flex;
+  }
+  
+  .containers {
+    margin-left: 0%;
+    margin-right: 5%;
+    margin-top: 2%;
+  }
+  
+  .contactbody {
+    width: 100%;
+    max-width: 800px; /* Set a maximum width for larger screens */
+    height: auto; /* Instead of fixed height */
+    border: 1px solid black;
+    background-color: bisque;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact_box {
+    padding-left: 10%; /* Adjust as needed */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    
+    .contactbody {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .contact_box {
+      padding-left: 0;
+    }
+  }
+  
+  /* Further Responsive Adjustments for Small Screens */
+  @media (max-width: 576px) {
+    .containers {
+      margin-left: -10%;
+      margin-right: 3%;
+    }
+  
+    .contactbody {
+      padding: 8px; /* Further adjust padding for smaller screens */
+    }
+  }

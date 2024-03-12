@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - Student Data Portal</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0066cc;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      color: #666;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    /* Add a new class for hiding and showing the tutorial section */
+    .hidden {
+      display: none;
+    }
+    .main-step {
+            font-weight: bold;
+        }
+
+        .sub-steps {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .sub-sub-steps {
+            list-style-type: disc;
+            margin-left: 40px;
+        }
+
+  </style>
+</head>
+<body>
+
+<!-- Your help content goes here -->
+<h1>Welcome to the Help Section</h1>
+<hr>
+<section>
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  <ul>
+    <li><strong>Q:</strong> How do I create a new student profile?</li>
+    <li><strong>A:</strong> To create a new student profile, navigate to the "Add Student" section...</li>
+    <li><strong>Q:</strong>  What is the purpose of this website? </li>
+    <li><strong>A:</strong> This website serves as a centralized platform for gathering primary student details in [District Name]. It is accessible by administrators and centralized government officers to streamline data management and improve oversight. </li>
+    <li><strong>Q:</strong>How do I access the website? </li>
+    <li><strong>A:</strong>Access to the website is restricted to authorized users. If you are an administrator or government officer and need access, please contact [provide contact information] for assistance. </li>
+    <li><strong>Q:</strong>I forgot my password. How can I reset it? </li>
+    <li><strong>A:</strong>Click on the "Forgot Password" link on the login page and follow the instructions to reset your password. If you encounter any issues, contact our support team at [provide contact information] </li>
+    <li><strong>Q:</strong> How do I delete student details?</li>
+    <li><strong>A:</strong>After logging in, navigate to the [specific section] and click on the " delete" button.  </li>
+    <li><strong>Q:</strong> Can I edit student information after submission?</li>
+    <li><strong>A:</strong>Yes, administrators have the ability to edit student details. Go to the [specific section], locate the student record, and click on the "Edit" button. Make the necessary changes and save. </li>
+    <li><strong>Q:</strong> I'm experiencing technical issues with the website. What should I do?</li>
+    <li><strong>A:</strong>If you encounter technical issues, try clearing your browser cache and cookies. If the problem persists, please contact our support team at [provide contact information] for further assistance. </li>
+  </ul>
+</section>
+
+
+<hr>    
+<section>
+  <h2>Tutorials</h2>
+  <p>Our tutorials will guide you through various tasks within the Student Data Portal:</p>
+  <ul>
+    <!-- Add an onclick event to the tutorial link to toggle visibility -->
+    <li><a href="javascript:void(0);" onclick="toggleTutorial()" >Tutorial : Introduction to the Portal</a></li>
+  </ul>
+
+  <!-- Add a div for the tutorial content with the 'hidden' class -->
+  <div id="tutorialSection" class="hidden">
+    
+    <!-- Include the tutorial content here -->
+    <ol>
+        <li>
+            <p class="main-step">Step 1: Login to the Website</p>
+            <ul class="sub-steps">
+                <li>Open your web browser and go to <a href="[website URL]" target="_self">[website URL]</a>.</li>
+                <li>Enter your username and password to log in.</li>
+            </ul>
+        </li>
+        <li>
+            <p class="main-step">Step 2: Navigate to the Student Management Section</p>
+            <ul class="sub-steps">
+                <li>Once logged in, you will see the dashboard.</li>
+            </ul>
+        </li>
+
+        <li>
+            <p class="main-step">Step 3: Add a New Student</p>
+            <ul class="sub-steps">
+                <li>Fill in the required information, such as student name, date of birth, address, etc.</li>
+                <li>Upload any necessary documents (if applicable).</li>
+                <li>Click the "Save" button to add the new student.</li>
+            </ul>
+        </li>
+
+        <li>
+            <p class="main-step">Step 4: Edit Student Information (if needed)</p>
+            <ul class="sub-steps">
+                <li>Go back to the Student Management section.</li>
+                <li>Locate the student record you want to edit and follow the steps to make changes.</li>
+                <li>Click "Save" to apply the changes.</li>
+            </ul>
+        </li>
+
+        <li>
+            <p class="main-step">Step 5: Logout</p>
+            <ul class="sub-steps">
+                <li>Always remember to log out when you've finished using the website.</li>
+                <li>Click on the "Logout" button located in the top-right corner.</li>
+            </ul>
+        </li>
+
+    </ol>
+  </div>
+</section>
+<hr>
+
+<section>
+  <h2>Contact Information</h2>
+  <p>If you need further assistance, feel free to reach out to us:</p>
+  <p>Email: support@yourportal.com</p>
+  <p>Phone: 123-456-7890</p>
+ 
+</section>
+
+<!-- Include JavaScript to toggle visibility -->
+<script>
+  function toggleTutorial() {
+    var tutorialSection = document.getElementById("tutorialSection");
+    tutorialSection.classList.toggle("hidden");
+  }
+</script>
+
+</body>
+</html>
